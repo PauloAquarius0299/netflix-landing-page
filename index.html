@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <title>Netflix - Landing page UI design</title>
+</head>
+<body>
+        <header>
+            <a href="#" class="logo"><img src="img/logo.png" alt="logo"></a>
+            <ul class="navegation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">TV Show</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">Lastest</a></li>
+                <li><a href="#">My List</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+        
+        </header>
+        <div class="banner">
+            <img src="img/bg.jpg" class="bg">
+            <div class="content">
+                <img src="img/name.png" class="movieTitle" alt="">
+                <h4>
+                    <span>2020</span>
+                    <span><i>12+</i></span>
+                    <span>1h 55min</span>
+                    <span>Action</span>
+                </h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem neque reprehenderit fugit alias eum, natus, unde ullam quas tempora nihil perspiciatis ad nemo dignissimos aliquid autem nulla. Quibusdam, accusamus nihil?</p>
+                <div class="buttons">
+                    <a href="#" class="fa fa-play" aria-hidden="true" ></i>Play</a> 
+                    <a href="#" class="fa fa-plus" aria-hidden="true"></i> My List</a>></i>
+                </div>
+            </div>
+            <a href="" class="play" onclick="toggleVideo();"><img src="img/play.png" alt="">Watch Trailer</a>
+        </div>
+
+        <div class="trailer">
+            <video src="img/production_id_3999352 (360p).mp4" controls="true"></video>
+            <img src="img/close.png" class="close"  alt="" onclick="toggleVideo();">
+        </div>
+
+
+        <script>
+            function toggleVideo(){
+                const trailer = document.querySelector('.trailer');
+                const video = document.querySelector('video');
+                trailer.classList.toggle('.active')
+                video.currentTime = 0;
+                video.pause();
+            }
+        </script>
+</body>
+</html>
